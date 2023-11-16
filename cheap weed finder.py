@@ -1,5 +1,5 @@
 #Purpose: To scrape data and find cheapest weed from the two cloesest dispos
-#Version: 0.1
+#Version: 0.2
 #Date of Update: 1/11/23
 
 import os
@@ -26,8 +26,7 @@ def maryj():
     url = "https://shop.maryjcannabis.ca/embed/stores/3217/menu?filters%5Broot_types%5D%5B%5D=flower"
     driver.get(url)
     wait = WebDriverWait(driver, 30) 
-    
-    
+
 #press load more button to get full selection
     try:
 #try to find load more button
@@ -63,7 +62,7 @@ def maryj():
      bclick[b].click()
      
 #wait for collection of weight and price
-    budsCost = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".css-suzff2")))
+    budsCost = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".css-1qo8ip7")))
     budsCost = [bud.text for bud in budsCost]
         
 
@@ -77,10 +76,10 @@ def maryj():
      for element in range(0, len(budsCost[bud]), 2):
       weight = budsCost[bud][element]
       dpg = round(float(budsCost[bud][element + 1])/float(weight), 2)
-      temp_list.append(dpg, weight)
+      temp_list.append([dpg, weight])
 #sort weight options by cheapest
      temp_list.sort(key = lambda x: x[0])
-     budsInfo[bud].append(temp_list)
+     budsInfo[bud].extend(temp_list)
      
     budsInfo.sort(key = lambda x: x[3][0])
     driver.close()
@@ -145,13 +144,13 @@ def inspired():
         weight = 7
    
       dpg = round((float(budsCost[bud][element + 1])/weight)*0.85, 2) 
-      temp_list.append(dpg, weight)
+      temp_list.append([dpg, weight])
       
 #sort weight options by cheapest
      temp_list.sort(key = lambda x: x[0])
-     budsInfo[bud].append(temp_list)
+     budsInfo[bud].extend(temp_list)
 
-#sort entire list by cheaptest dpg then print top 5
+#sort entire list by cheaptest dpg
     budsInfo.sort(key = lambda x: x[2][0])
     driver.close()
     return budsInfo
