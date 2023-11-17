@@ -1,5 +1,5 @@
 #Purpose: To scrape data and find cheapest weed from the two cloesest dispos
-#Version: 0.2
+#Version: 0.4
 #Date of Update: 1/11/23
 
 import os
@@ -12,8 +12,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-#save starting time
-start_time = time.time()
 
 #function to clear conle
 def clearconsole():
@@ -75,7 +73,7 @@ def maryj():
 #find dollars per gram using every 2 indicies
      for element in range(0, len(budsCost[bud]), 2):
       weight = budsCost[bud][element]
-      dpg = round(float(budsCost[bud][element + 1])/float(weight), 2)
+      dpg = round((float(budsCost[bud][element + 1])/float(weight))*discount, 2)
       temp_list.append([dpg, weight])
 #sort weight options by cheapest
      temp_list.sort(key = lambda x: x[0])
@@ -156,6 +154,22 @@ def inspired():
     return budsInfo
    
 #calling both functions and saving their values
+askdiscount = input("Do you have a discount for MaryJ? (y/n): ")
+if askdiscount == "y" or "Y":
+    inputdiscount = input(f"What is your discount? (eg. 10 is 10% off): ")
+
+    try:
+        inputdiscount = float(inputdiscount)
+    except ValueError:
+        print("Invalid input.")
+        input("Press anything to continue...")
+        exit()
+clearconsole()
+
+#save starting time
+start_time = time.time()
+
+discount = 1 - (inputdiscount/100)
 MaryJ = maryj()
 Inspired = inspired()
 
