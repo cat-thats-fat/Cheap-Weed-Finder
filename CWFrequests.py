@@ -1,3 +1,12 @@
+#Title: CWFrequests
+#Purpose: To get the cheapest weed from the cloest three dispensaries
+#Version: 1.0
+#Date: 22/11/2023
+#To Do: 
+#   Fortmat the output
+#   Add other dispensaries, 
+#   Find way to get hits per page before the main request
+
 import os
 import json
 import requests
@@ -43,7 +52,6 @@ json.dumps(json_data, indent=4, sort_keys=True)
 weed_dir = {}
 for hit in json_data['hits']:
     weed_dir[hit['name']] = {
-        'description': hit['description'],
         'category': hit['category'],
         'brand': hit['brand'],
         'discounted_price_eighth_ounce': hit['discounted_price_eighth_ounce'],
@@ -63,30 +71,39 @@ for hit in json_data['hits']:
         'dpg': [],
     }
 
+    removekeys = []
     for key, value in weed_dir[hit['name']].items():
         if "price" in key:
             if value is None:
+                removekeys.append(key)
                 continue
             if 'price_eighth_ounce' in key:
-                weed_dir[hit['name']]['dpg'].append((float(value) / 3.5)*0.85)
+                dpg = (float(value) / 3.5)*0.85
+                weed_dir[hit['name']]['dpg'].append([dpg, "eighth"])
                 continue
             elif 'price_quarter_ounce' in key:
-                weed_dir[hit['name']]['dpg'].append((float(value) / 7)*0.85)
+                dpg = (float(value) / 7)*0.85
+                weed_dir[hit['name']]['dpg'].append([dpg, "quarter"])
                 continue
             elif 'price_half_ounce' in key:
-                weed_dir[hit['name']]['dpg'].append((float(value) / 14)*0.85)
+                dpg = (float(value) / 14)*0.85
+                weed_dir[hit['name']]['dpg'].append([dpg, "half ounce"])
                 continue
             elif 'price_ounce' in key:
-                weed_dir[hit['name']]['dpg'].append((float(value) / 28)*0.85)
+                dpg = (float(value) / 28)*0.85
+                weed_dir[hit['name']]['dpg'].append([dpg, "ounce"])
                 continue
             elif 'price_gram' in key:
-                weed_dir[hit['name']]['dpg'].append((float(value))*0.85)
+                dpg = (float(value))*0.85
+                weed_dir[hit['name']]['dpg'].append([dpg, "gram"])
                 continue
             elif 'price_two_gram' in key:
-                weed_dir[hit['name']]['dpg'].append9((float(value) / 2)*0.85)
+                dpg = (float(value) / 2)*0.85
+                weed_dir[hit['name']]['dpg'].append9(dpg , "two gram")
                 continue
             elif 'price_half_gram' in key:
-                weed_dir[hit['name']]['dpg'].append((float(value) / 0.5)*0.85)
+                dpg = (float(value) / 0.5)*0.85
+                weed_dir[hit['name']]['dpg'].append([dpg, "half gram"])
                 continue
             else:
                 print("Error at DPG calculation")
@@ -94,13 +111,20 @@ for hit in json_data['hits']:
             continue
     weed_dir[hit['name']]['dpg'].sort()
 
-weed_dir = dict(sorted(weed_dir.items(), key=lambda item: item[1]['dpg'][0]))
+    for key in removekeys:
+        del weed_dir[hit['name']][key]
 
-if os.path.exists('weed_dir.json'):
-    os.remove('weed_dir.json')
+weed_dir = dict(sorted(weed_dir.items(), key=lambda item: item[1]['dpg'][0])[:5])
 
-with open('weed_dir.json', 'w') as f:
-    json.dump(weed_dir, f, indent=4)
-    f.close
+print(weed_dir)
 
 
+
+
+
+#if os.path.exists('weed_dir.json'):
+    #os.remove('weed_dir.json')
+
+#with open('weed_dir.json', 'w') as f:
+    #json.dump(weed_dir, f, indent=4)
+    #f.close
