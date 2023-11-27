@@ -1,4 +1,4 @@
-#Purpose: To scrape data and find cheapest weed from the two cloesest dispos
+#Purpose: To scrape data and find cheapest weed from the two closest dispos
 #Version: 0.4
 #Date of Update: 1/11/23
 
