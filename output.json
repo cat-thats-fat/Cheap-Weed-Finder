@@ -1,0 +1,1580 @@
+{
+    "710": {
+        "Sage & Sour": {
+            "category": "Sativa",
+            "brand": "MTL Cannabis",
+            "weights": [
+                "3.5g",
+                "14g",
+                "28g"
+            ],
+            "prices": [
+                30.27,
+                98.98,
+                163.84
+            ],
+            "specialPrices": []
+        },
+        "Dessert (Apple Fritter)": {
+            "category": "Hybrid",
+            "brand": "LowKey by MTL Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                27.45
+            ],
+            "specialPrices": []
+        },
+        "Jungl' Cake": {
+            "category": "Hybrid",
+            "brand": "MTL Cannabis",
+            "weights": [
+                "3.5g",
+                "14g"
+            ],
+            "prices": [
+                35.81,
+                98.98
+            ],
+            "specialPrices": []
+        },
+        "Organic Comatose": {
+            "category": "Indica",
+            "brand": "1964",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                37.28
+            ],
+            "specialPrices": []
+        },
+        "Cuban Linx": {
+            "category": "Sativa",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g",
+                "28g"
+            ],
+            "prices": [
+                29.55,
+                189.26
+            ],
+            "specialPrices": []
+        },
+        "GMO Cookies": {
+            "category": "Indica",
+            "brand": "Spinach",
+            "weights": [
+                "3.5g",
+                "7g",
+                "28g"
+            ],
+            "prices": [
+                22.25,
+                39.2,
+                124.02
+            ],
+            "specialPrices": []
+        },
+        "Gelato Mint": {
+            "category": "Indica",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                29.55
+            ],
+            "specialPrices": []
+        },
+        "Haze": {
+            "category": "Hybrid",
+            "brand": "LowKey by MTL Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                27.45
+            ],
+            "specialPrices": []
+        },
+        "Ice Cream Cake": {
+            "category": "Indica",
+            "brand": "RC Supply Co",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                67.79
+            ],
+            "specialPrices": []
+        },
+        "Strawberry N' Mintz": {
+            "category": "Sativa",
+            "brand": "MTL Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                35.36
+            ],
+            "specialPrices": []
+        },
+        "Blue Dream": {
+            "category": "Sativa",
+            "brand": "Spinach",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                22.25
+            ],
+            "specialPrices": []
+        },
+        "Cold Creek Kush": {
+            "category": "Hybrid",
+            "brand": "Redecan",
+            "weights": [
+                "1g",
+                "3.5g"
+            ],
+            "prices": [
+                8.87,
+                21.46
+            ],
+            "specialPrices": []
+        },
+        "Mango Haze": {
+            "category": "Sativa",
+            "brand": "Color Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                24.85
+            ],
+            "specialPrices": []
+        },
+        "Jean Guy": {
+            "category": "Sativa",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g",
+                "15g",
+                "28g"
+            ],
+            "prices": [
+                17.5,
+                60.96,
+                99.99
+            ],
+            "specialPrices": []
+        },
+        "StarWalker Kush": {
+            "category": "Indica",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                17.5
+            ],
+            "specialPrices": []
+        },
+        "Wappa": {
+            "category": "Indica",
+            "brand": "Redecan",
+            "weights": [
+                "1g",
+                "3.5g",
+                "14g"
+            ],
+            "prices": [
+                8.87,
+                21.46,
+                64.92
+            ],
+            "specialPrices": []
+        },
+        "Animal Face by Carmel": {
+            "category": "Indica",
+            "brand": "Carmel Cannabis",
+            "weights": [
+                "3.5g",
+                "14g"
+            ],
+            "prices": [
+                49.14,
+                144.63
+            ],
+            "specialPrices": []
+        },
+        "Pink Kush": {
+            "category": "Indica",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g",
+                "7g",
+                "14g",
+                "28g"
+            ],
+            "prices": [
+                20.96,
+                39.49,
+                70.23,
+                127.78
+            ],
+            "specialPrices": []
+        },
+        "Tropic Thunder": {
+            "category": "Hybrid",
+            "brand": "SHRED",
+            "weights": [
+                "7g",
+                "14g"
+            ],
+            "prices": [
+                27.97,
+                55.88
+            ],
+            "specialPrices": []
+        },
+        "Alien Guy": {
+            "category": "N/A",
+            "brand": "Canaca",
+            "weights": [
+                "7g",
+                "28g"
+            ],
+            "prices": [
+                43.61,
+                134.46
+            ],
+            "specialPrices": []
+        },
+        "All Dressed Milled Cannabis Flower by SHRED - All Dressed Milled Cannabis Flower by SHRED": {
+            "category": "N/A",
+            "brand": "SHRED",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                27.97
+            ],
+            "specialPrices": []
+        },
+        "Animal Rntz Cannabis Flower by Redecan - Animal Rntz Cannabis Flower by Redecan": {
+            "category": "N/A",
+            "brand": "Redecan",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                24.74
+            ],
+            "specialPrices": []
+        },
+        "Apple Fritter": {
+            "category": "N/A",
+            "brand": "Potluck",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                36.71
+            ],
+            "specialPrices": []
+        },
+        "BC Purple Kush Cannabis Flower by Versus - BC Purple Kush Cannabis Flower by Versus": {
+            "category": "N/A",
+            "brand": "Versus",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                36.15
+            ],
+            "specialPrices": []
+        },
+        "BC Sour Kush": {
+            "category": "Indica",
+            "brand": "Fraser Valley Weed Co.",
+            "weights": [
+                "14g"
+            ],
+            "prices": [
+                46.21
+            ],
+            "specialPrices": []
+        },
+        "Banana OG": {
+            "category": "Sativa",
+            "brand": "Back Forty",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                21.75
+            ],
+            "specialPrices": []
+        },
+        "Bernie Hana Butter Cannabis Flower by Cookies - Bernie Hana Butter Cannabis Flower by Cookies": {
+            "category": "N/A",
+            "brand": "Cookies",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                40.67
+            ],
+            "specialPrices": []
+        },
+        "Black Garlic Cannabis Flower by Choklit Park - Black Garlic Cannabis Flower by Choklit Park": {
+            "category": "N/A",
+            "brand": "Choklit Park",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                36.15
+            ],
+            "specialPrices": []
+        },
+        "Blockhead Cannabis Flower by Wagners - Blockhead Cannabis Flower by Wagners": {
+            "category": "N/A",
+            "brand": "Wagners",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                31.85
+            ],
+            "specialPrices": []
+        },
+        "Blueberry Funk Cannabis Flower by Pure Sunfarms - Blueberry Funk Cannabis Flower by Pure Sunfarms": {
+            "category": "N/A",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                20.96
+            ],
+            "specialPrices": []
+        },
+        "Blueberry Tart": {
+            "category": "N/A",
+            "brand": "Potluck",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                36.71
+            ],
+            "specialPrices": []
+        },
+        "Blueberry Yum Yum Cannabis Flower by Cake & Caviar - Blueberry Yum Yum Cannabis Flower by Cake & Caviar": {
+            "category": "N/A",
+            "brand": "Cake & Caviar",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                48.19
+            ],
+            "specialPrices": []
+        },
+        "Bush League Sour Kush": {
+            "category": "Indica",
+            "brand": "Back Forty",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                27.11
+            ],
+            "specialPrices": []
+        },
+        "Cap Jnky Cannabis Flower by EastCann - Cap Jnky Cannabis Flower by EastCann": {
+            "category": "N/A",
+            "brand": "Eastcann",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                38.41
+            ],
+            "specialPrices": []
+        },
+        "Chemdozer": {
+            "category": "N/A",
+            "brand": "Eastcann",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                38.41
+            ],
+            "specialPrices": []
+        },
+        "Cherry Blossom": {
+            "category": "High CBD",
+            "brand": "5 POINTS",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                25.88
+            ],
+            "specialPrices": []
+        },
+        "Cherry Blossom CBD": {
+            "category": "N/A",
+            "brand": "WholeHemp",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                19.88
+            ],
+            "specialPrices": []
+        },
+        "Cherry Diesel Cheesecake": {
+            "category": "N/A",
+            "brand": "Be Humble.",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                33.44
+            ],
+            "specialPrices": []
+        },
+        "Chunk Dawg": {
+            "category": "N/A",
+            "brand": "Terp Town Collective",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                44.06
+            ],
+            "specialPrices": []
+        },
+        "Citrus Abduction Ground Cannabis Flower by Super Toast - Citrus Abduction Ground Cannabis Flower by Super Toast": {
+            "category": "N/A",
+            "brand": "Super Toast",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                30.5
+            ],
+            "specialPrices": []
+        },
+        "Crumbled Lime Cannabis Flower by 3Saints - Crumbled Lime Cannabis Flower by 3Saints": {
+            "category": "N/A",
+            "brand": "3 Saints",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                21.87
+            ],
+            "specialPrices": []
+        },
+        "Crumbled Lime Cannabis Flower by FIGR - Crumbled Lime Cannabis Flower by FIGR": {
+            "category": "N/A",
+            "brand": "FIGR",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                124.29
+            ],
+            "specialPrices": []
+        },
+        "CrunchBerries Cannabis Flower by Sweetgrass Cannabis - CrunchBerries Cannabis Flower by Sweetgrass Cannabis": {
+            "category": "N/A",
+            "brand": "Sweetgrass Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                42.36
+            ],
+            "specialPrices": []
+        },
+        "D. Burger": {
+            "category": "Indica",
+            "brand": "Fraser Valley Weed Co.",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                94.91
+            ],
+            "specialPrices": []
+        },
+        "Dessert Storm Milled Cannabis Flower by Shred": {
+            "category": "N/A",
+            "brand": "SHRED",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                27.97
+            ],
+            "specialPrices": []
+        },
+        "Donair Kush": {
+            "category": "N/A",
+            "brand": "Truro",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                35.02
+            ],
+            "specialPrices": []
+        },
+        "Drip station Cannabis Flower by Tribal - Drip station Cannabis Flower by Tribal": {
+            "category": "N/A",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                29.55
+            ],
+            "specialPrices": []
+        },
+        "Electric Grapefruit": {
+            "category": "N/A",
+            "brand": "Soar",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                56.49
+            ],
+            "specialPrices": []
+        },
+        "Frosted Cream Puffs": {
+            "category": "Hybrid",
+            "brand": "Spinach",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                124.02
+            ],
+            "specialPrices": []
+        },
+        "Fruit Collection Cannabis Flower Ounce by Potluck - Fruit Collection Cannabis Flower Ounce by Potluck": {
+            "category": "N/A",
+            "brand": "Potluck",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                128.81
+            ],
+            "specialPrices": []
+        },
+        "Fruitsplosion Milled": {
+            "category": "Sativa",
+            "brand": "Canaca",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                29.93
+            ],
+            "specialPrices": []
+        },
+        "GMO Tropical Reign": {
+            "category": "N/A",
+            "brand": "Holy Mountain",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                123.16
+            ],
+            "specialPrices": []
+        },
+        "GP20 Cannabis Flower by Cookies - GP20 Cannabis Flower by Cookies": {
+            "category": "N/A",
+            "brand": "Cookies",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                40.67
+            ],
+            "specialPrices": []
+        },
+        "Galactic Rntz": {
+            "category": "Indica",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                29.55
+            ],
+            "specialPrices": []
+        },
+        "Gas Banana Cannabis Flower by Boreal - Gas Banana Cannabis Flower by Boreal": {
+            "category": "N/A",
+            "brand": "Boreal",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                64.06
+            ],
+            "specialPrices": []
+        },
+        "Georgia Pie Cannabis Flower by Cookies - Georgia Pie Cannabis Flower by Cookies": {
+            "category": "N/A",
+            "brand": "Cookies",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                40.67
+            ],
+            "specialPrices": []
+        },
+        "Ghost Gelato": {
+            "category": "N/A",
+            "brand": "Canaca",
+            "weights": [
+                "7g",
+                "28g"
+            ],
+            "prices": [
+                43.61,
+                134.46
+            ],
+            "specialPrices": []
+        },
+        "Gnarberry - Cannabis Flower by Shred - Gnarberry - Cannabis Flower by Shred": {
+            "category": "N/A",
+            "brand": "SHRED",
+            "weights": [
+                "14g"
+            ],
+            "prices": [
+                55.36
+            ],
+            "specialPrices": []
+        },
+        "Grand Daddy Purps": {
+            "category": "N/A",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                17.5
+            ],
+            "specialPrices": []
+        },
+        "Grandpa's Stash Cannabis Flower by Good Supply - Grandpa's Stash Cannabis Flower by Good Supply": {
+            "category": "N/A",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                17.5
+            ],
+            "specialPrices": []
+        },
+        "Green Monster Breath": {
+            "category": "Indica",
+            "brand": "Spinach",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                28.24
+            ],
+            "specialPrices": []
+        },
+        "Holiday Taster Pack Cannabis Flower by 7ACRES - Holiday Taster Pack 2x Cannabis Flowers by 7ACRES": {
+            "category": "N/A",
+            "brand": "7ACRES",
+            "weights": [
+                "14g"
+            ],
+            "prices": [
+                87
+            ],
+            "specialPrices": []
+        },
+        "Holy Grail Kush Cannabis Flower by Broken Coast - Holy Grail Kush Cannabis Flower by Broken Coast": {
+            "category": "N/A",
+            "brand": "APHRIA INC.",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                67.52
+            ],
+            "specialPrices": []
+        },
+        "INDICA 20% PLUS Milled": {
+            "category": "N/A",
+            "brand": "Weed Me Grind",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                34.68
+            ],
+            "specialPrices": []
+        },
+        "Jealousy x Apples & Bananas Cannabis Flower by Truro - Jealousy x Apples & Bananas Cannabis Flower by Truro": {
+            "category": "N/A",
+            "brand": "Truro",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                64.4
+            ],
+            "specialPrices": []
+        },
+        "Jet Fuel Gelato": {
+            "category": "Hybrid",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g",
+                "7g",
+                "14g"
+            ],
+            "prices": [
+                20.96,
+                33.89,
+                59.88
+            ],
+            "specialPrices": []
+        },
+        "Jigglers Cannabis Flower by Tribal - Jigglers Dried Flower": {
+            "category": "N/A",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                29.55
+            ],
+            "specialPrices": []
+        },
+        "Key Lime Gelato Craft Cannabis Flower by BC OZ - Key Lime Gelato Craft Cannabis Flower by BC OZ": {
+            "category": "N/A",
+            "brand": "BC OZ",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                146.89
+            ],
+            "specialPrices": []
+        },
+        "Knockout": {
+            "category": "N/A",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g",
+                "28g"
+            ],
+            "prices": [
+                20.96,
+                127.78
+            ],
+            "specialPrices": []
+        },
+        "Ksmorz": {
+            "category": "N/A",
+            "brand": "Carmel Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                35.7
+            ],
+            "specialPrices": []
+        },
+        "Lakeside Kush Cannabis Flower by Muskoka Grown - Lakeside Kush Cannabis Flower by Muskoka Grown": {
+            "category": "N/A",
+            "brand": "Muskoka Grown",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                168.36
+            ],
+            "specialPrices": []
+        },
+        "Lazer Wolf Cannabis Flower by Terp Town Collective - Lazer Wolf Cannabis Flower by Terp Town Collective": {
+            "category": "N/A",
+            "brand": "Terp Town Collective",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                44.06
+            ],
+            "specialPrices": []
+        },
+        "Lemon Linx Milled Cannabis Flower by Nugz Grind - Lemon Linx Milled Cannabis Flower by Nugz Grind": {
+            "category": "N/A",
+            "brand": "Nugz Grind",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                31.85
+            ],
+            "specialPrices": []
+        },
+        "Lemon Octane": {
+            "category": "N/A",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g",
+                "28g"
+            ],
+            "prices": [
+                20.96,
+                127.78
+            ],
+            "specialPrices": []
+        },
+        "Limelight": {
+            "category": "Sativa",
+            "brand": "Edison Cannabis Co.",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                49.71
+            ],
+            "specialPrices": []
+        },
+        "MAC 1": {
+            "category": "Hybrid",
+            "brand": "Fraser Valley Weed Co.",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                94.91
+            ],
+            "specialPrices": []
+        },
+        "MAC 2 Cannabis Flower by CALI - MAC 2 Cannabis Flower by CALI": {
+            "category": "N/A",
+            "brand": "CALI",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                38.41
+            ],
+            "specialPrices": []
+        },
+        "Mac and Cheese": {
+            "category": "N/A",
+            "brand": "Potluck",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                36.71
+            ],
+            "specialPrices": []
+        },
+        "Mandarin Cookie's": {
+            "category": "N/A",
+            "brand": "Back Forty",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                40.44
+            ],
+            "specialPrices": []
+        },
+        "Maple Pancakes": {
+            "category": "N/A",
+            "brand": "Potluck",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                36.71
+            ],
+            "specialPrices": []
+        },
+        "Marmalade Punch": {
+            "category": "N/A",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g",
+                "28g"
+            ],
+            "prices": [
+                20.96,
+                127.78
+            ],
+            "specialPrices": []
+        },
+        "Master Mazar Kush Cannabis Flower by Good Supply - Master Mazar Kush Cannabis Flower by Good Supply": {
+            "category": "N/A",
+            "brand": "Good Supply",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                37.05
+            ],
+            "specialPrices": []
+        },
+        "Mega Breath Cannabis Flower by True Fire - Mega Breath Cannabis Flower by True Fire": {
+            "category": "N/A",
+            "brand": "True Fire",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                35.02
+            ],
+            "specialPrices": []
+        },
+        "Milk Cake Cannabis Flower by The Loud Plug - Milk Cake Cannabis Flower by The Loud Plug": {
+            "category": "N/A",
+            "brand": "The Loud Plug",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                159.32
+            ],
+            "specialPrices": []
+        },
+        "Mint Chocolate Chip Cannabis Flower by Sweetgrass Cannabis - Mint Chocolate Chip Cannabis Flower by Sweetgrass Cannabis": {
+            "category": "N/A",
+            "brand": "Sweetgrass Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                40.89
+            ],
+            "specialPrices": []
+        },
+        "Mint Cookie Kush Cannabis Flower by Color Cannabis - Mint Cookie Kush Cannabis Flower by Color Cannabis": {
+            "category": "N/A",
+            "brand": "Color Cannabis",
+            "weights": [
+                "14g"
+            ],
+            "prices": [
+                79.77
+            ],
+            "specialPrices": []
+        },
+        "Monkey Butter": {
+            "category": "Indica",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                17.5
+            ],
+            "specialPrices": []
+        },
+        "Northern Lights Cannabis Flower by Station House - Northern Lights Cannabis Flower by Station House": {
+            "category": "N/A",
+            "brand": "Sensi Brands Ltd.",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                22.93
+            ],
+            "specialPrices": []
+        },
+        "OG Blue Sherb Cannabis Flower by BZAM x DUNN - OG Blue Sherb Cannabis Flower by BZAM x DUNN": {
+            "category": "N/A",
+            "brand": "BZAM X DUNN",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                82.48
+            ],
+            "specialPrices": []
+        },
+        "Organic Death Bubba Cannabis Flower by 1964 - Organic Death Bubba Cannabis Flower by 1964": {
+            "category": "N/A",
+            "brand": "1964",
+            "weights": [
+                "3.5g",
+                "14g"
+            ],
+            "prices": [
+                37.28,
+                124.29
+            ],
+            "specialPrices": []
+        },
+        "Organic Gelato #41": {
+            "category": "N/A",
+            "brand": "1964",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                37.28
+            ],
+            "specialPrices": []
+        },
+        "Panda Puffs": {
+            "category": "Hybrid",
+            "brand": "Back Forty",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                21.75
+            ],
+            "specialPrices": []
+        },
+        "Peanut Butter Rockstar": {
+            "category": "N/A",
+            "brand": "CanWe",
+            "weights": [
+                "1g"
+            ],
+            "prices": [
+                10.05
+            ],
+            "specialPrices": []
+        },
+        "Pineapple Express": {
+            "category": "N/A",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g",
+                "14g"
+            ],
+            "prices": [
+                17.5,
+                58.75
+            ],
+            "specialPrices": []
+        },
+        "Pineapple God": {
+            "category": "Indica",
+            "brand": "Soar",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                56.49
+            ],
+            "specialPrices": []
+        },
+        "Pink Slurricane Cannabis Flower by LaHoja - Pink Slurricane Cannabis Flower by LaHoja": {
+            "category": "N/A",
+            "brand": "LaHoja",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                29.82
+            ],
+            "specialPrices": []
+        },
+        "Poison OG Cannabis Flower by EastCann - Poison OG Cannabis Flower by EastCann": {
+            "category": "N/A",
+            "brand": "Eastcann",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                38.41
+            ],
+            "specialPrices": []
+        },
+        "Power Nap CBD": {
+            "category": "N/A",
+            "brand": "Catch Me Outside",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                19.88
+            ],
+            "specialPrices": []
+        },
+        "Purple Churro Cannabis Flower by EastCann - Purple Churro Cannabis Flower by EastCann": {
+            "category": "N/A",
+            "brand": "Eastcann",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                38.41
+            ],
+            "specialPrices": []
+        }
+    },
+    "Giggles": {
+        "Tribal - Cuban Linx - Sativa": {
+            "category": "Sativa",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                31.99
+            ],
+            "specialPrices": []
+        },
+        "Back Forty - Mandarin Cookies - Sativa": {
+            "category": "Sativa",
+            "brand": "Back Forty",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                129.99
+            ],
+            "specialPrices": []
+        },
+        "Bambu Select - Double Donny - Indica": {
+            "category": "Indica",
+            "brand": "Bambu Select",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                39.99
+            ],
+            "specialPrices": []
+        },
+        "Blue Dream": {
+            "category": "Sativa",
+            "brand": "Spinach",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                24.99
+            ],
+            "specialPrices": []
+        },
+        "Cake & Caviar - Blueberry Yum Yum - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Cake & Caviar",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                49.99
+            ],
+            "specialPrices": []
+        },
+        "FIGR - Crumbled Lime - Dried Flower - Sativa": {
+            "category": "Sativa",
+            "brand": "FIGR",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                23.99
+            ],
+            "specialPrices": []
+        },
+        "Good Supply - Grand Daddy\u00a0Purps - Indica": {
+            "category": "Indica",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                19.99
+            ],
+            "specialPrices": []
+        },
+        "Good Supply - Pineapple Express - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                19.99
+            ],
+            "specialPrices": []
+        },
+        "Good Supply - Starwalker Kush Indica": {
+            "category": "Indica",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                17.95
+            ],
+            "specialPrices": []
+        },
+        "Good Supply - Sweet Berry Kush - Indica": {
+            "category": "Indica",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g",
+                "28g"
+            ],
+            "prices": [
+                19.99,
+                125.99
+            ],
+            "specialPrices": []
+        },
+        "GreenSeal - Purple Crush - Sativa": {
+            "category": "Sativa",
+            "brand": "GreenSeal Cannabis Co. ",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                38.99
+            ],
+            "specialPrices": []
+        },
+        "Jean Guy": {
+            "category": "Sativa",
+            "brand": "Good Supply",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                17.95
+            ],
+            "specialPrices": []
+        },
+        "Mango Haze": {
+            "category": "Sativa",
+            "brand": "Color Cannabis",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                25.99
+            ],
+            "specialPrices": []
+        },
+        "Nubium - Moonflower T-24 - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Nubium",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                26.99
+            ],
+            "specialPrices": []
+        },
+        "Nugz Grind - Gelato Sherb - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Nugz Grind",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                34.99
+            ],
+            "specialPrices": []
+        },
+        "Nugz Grind - Lemon Linx - Sativa": {
+            "category": "Sativa",
+            "brand": "Nugz Grind",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                32.99
+            ],
+            "specialPrices": []
+        },
+        "Nugz Grind - Slerple - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Nugz Grind",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                32.99
+            ],
+            "specialPrices": []
+        },
+        "Organnicraft - Platinum Grape - Hybrid - 7012": {
+            "category": "Hybrid",
+            "brand": "Organnicraft",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                40.99
+            ],
+            "specialPrices": []
+        },
+        "Redecan - Warlock - Indica": {
+            "category": "Indica",
+            "brand": "Redecan",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                125.99
+            ],
+            "specialPrices": []
+        },
+        "Reef Organic - Queen SanG - Sativa": {
+            "category": "Sativa",
+            "brand": "Reef Organic",
+            "weights": [
+                "1g"
+            ],
+            "prices": [
+                13.99
+            ],
+            "specialPrices": []
+        },
+        "SHRED - All Dressed - Hybrid": {
+            "category": "Hybrid",
+            "brand": "SHRED",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                30.99
+            ],
+            "specialPrices": [
+                28.95
+            ]
+        },
+        "SHRED - Dessert Storm - Hybrid": {
+            "category": "Hybrid",
+            "brand": "SHRED",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                28.95
+            ],
+            "specialPrices": []
+        },
+        "SKOSHA - Crab Cakes - Sativa": {
+            "category": "Sativa",
+            "brand": "SKOSHA",
+            "weights": [
+                "1g",
+                "3.5g"
+            ],
+            "prices": [
+                11.99,
+                31.99
+            ],
+            "specialPrices": []
+        },
+        "Spinach - GMO Cookies - Indica": {
+            "category": "Indica",
+            "brand": "Spinach",
+            "weights": [
+                "7g",
+                "28g"
+            ],
+            "prices": [
+                43.99,
+                134.99
+            ],
+            "specialPrices": []
+        },
+        "Spinach - Kiwi Lime Punch - Indica": {
+            "category": "Indica",
+            "brand": "Spinach",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                27.99
+            ],
+            "specialPrices": []
+        },
+        "Strains Limited - RNTZ": {
+            "category": "Hybrid",
+            "brand": "Strains Limited",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                42.99
+            ],
+            "specialPrices": []
+        },
+        "TABLE TOP - Yogurt - Hybrid": {
+            "category": "Hybrid",
+            "brand": "TABLE TOP",
+            "weights": [
+                "14g"
+            ],
+            "prices": [
+                79.99
+            ],
+            "specialPrices": []
+        },
+        "Tribal - Jigglers - Sativa": {
+            "category": "Sativa",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                31.99
+            ],
+            "specialPrices": []
+        },
+        "Tribal - Terple - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                31.99
+            ],
+            "specialPrices": []
+        },
+        "Tribal - Triple Burger - Indica": {
+            "category": "Indica",
+            "brand": "Tribal",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                31.99
+            ],
+            "specialPrices": []
+        },
+        "Tweed - Chemsicle - Sativa": {
+            "category": "Sativa",
+            "brand": "Tweed",
+            "weights": [
+                "14g"
+            ],
+            "prices": [
+                80.99
+            ],
+            "specialPrices": []
+        },
+        "Valhalla Flwr - Rainbow Lava - Sativa": {
+            "category": "Sativa",
+            "brand": "Valhalla Flwr",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                41.99
+            ],
+            "specialPrices": []
+        },
+        "Versus - Sweet Island Skunk - Sativa": {
+            "category": "Sativa",
+            "brand": "Versus",
+            "weights": [
+                "28g"
+            ],
+            "prices": [
+                109.99
+            ],
+            "specialPrices": []
+        },
+        "Woody Nelson - Glade Runner Craft Flower - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Woody Nelson",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                43.99
+            ],
+            "specialPrices": []
+        },
+        "Woody Nelson - Rainbow Driver Craft Flower - Hybrid": {
+            "category": "Hybrid",
+            "brand": "Woody Nelson",
+            "weights": [
+                "3.5g"
+            ],
+            "prices": [
+                43.99
+            ],
+            "specialPrices": []
+        },
+        "Funk Master": {
+            "category": "Hybrid",
+            "brand": "SHRED",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                30.99
+            ],
+            "specialPrices": [
+                28.95
+            ]
+        },
+        "Pink Kush": {
+            "category": "Indica",
+            "brand": "Pure Sunfarms",
+            "weights": [
+                "3.5g",
+                "14g"
+            ],
+            "prices": [
+                26.99,
+                84.99
+            ],
+            "specialPrices": [
+                23.99,
+                84.99
+            ]
+        },
+        "Tropic Thunder": {
+            "category": "Hybrid",
+            "brand": "SHRED",
+            "weights": [
+                "7g"
+            ],
+            "prices": [
+                30.99
+            ],
+            "specialPrices": [
+                28.95
+            ]
+        }
+    }
+}

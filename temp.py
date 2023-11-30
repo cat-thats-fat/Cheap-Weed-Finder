@@ -12,7 +12,7 @@ import json
 import requests
 from urllib.parse import parse_qs, unquote
 
-def janeRequest(data):
+def janeRequest():
     url = "https://vfm4x0n23a-1.algolianet.com/1/indexes/menu-products-production/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.2)%3B%20Browser"
 
     headers = {
@@ -37,7 +37,15 @@ def janeRequest(data):
         "x-algolia-application-id": "VFM4X0N23A",
     }
     
+    data = {
+        "query": "",
+        f"filters": "store_id :  4556 AND (root_types:\"flower\")",
+        "userToken": "XssZ5RgH1tpicdzUVCsrH",
+        "hitsPerPage": 200,
+    }
+    
     r = requests.post(url, headers=headers, json=data)
+    test = r.text
 
     json_data = json.loads(r.text)
 
@@ -111,7 +119,7 @@ def janeRequest(data):
 
     mary_dir = dict(sorted(mary_dir.items(), key=lambda item: item[1]['dpg'][0])[:5])
 
-    return mary_dir
+    return mary_dir, test
 
 def dutchrequest(dutchID):
     url = "https://dutchie.com/graphql"
@@ -134,57 +142,24 @@ def dutchrequest(dutchID):
     }
 
     response = requests.get(url, params=params, headers=headers)
-
     json_data = json.loads(response.text)
 
-    json.dumps(json_data, indent=4, sort_keys=True)
-
-    inspired_dir = {}
-    for product in json_data["data"]["filteredProducts"]["products"]:
-        inspired_dir[product["Name"]] = {
-            "category": product["strainType"],
-            "brand": product["brandName"],
-            "weights": product["Options"],
-            "prices": product["recPrices"],
-            "specialPrices": product["recSpecialPrices"],
-        }
-
-        dpg = []
-        pairing = {}
-        for pair in range(len(inspired_dir["Name"]["weights"])):
-            pairing[inspired_dir["Name"]["weights"][pair]] = inspired_dir["Name"]["prices"][pair]
-        return inspired_dir
-
-    #currently task: append dpg to inspired_dir["Name"]
-                     #steps to do: pair weights and prices, calculate dpg, sortdpg then sort entire directory by dpg, return top 5
-                     #other: change inspired_dir["Name"] to dutchie_dir["Name"]
 
 
+    return 
 
+dutchIDs = "5fefa138b2782100c5acd671"
+storeIDs = {"MaryJ's" : 3217, "Inspired" : 4556}
 
-
-dutchIDs = {"710": "5fefa138b2782100c5acd671", "Giggles": "62e858e63967b40082a6aba1"}
-janeIDs = {"MaryJ's" : 3217, "Inspired" : 4556}
-
-output = {}
+print(janeRequest())
+#output = {}
 #for key, value in storeIDs.items():
-    #filters_str = f"store_id : {value} AND (root_types:\"flower\")"
-
-    #data = {
-        #"query": "",
-        #"filters": filters_str,
-        #"userToken": "XssZ5RgH1tpicdzUVCsrH",
-        #"hitsPerPage": 200,
-    #}
-    #output[key] = janeRequest(data)
-
-for key, value in dutchIDs.items():
-    output[key] = dutchrequest(value)
+    #output[key] = janeRequest(value)
 
 
-if os.path.exists('output.json'):
-    os.remove('output.json')
+#if os.path.exists('output.json'):
+    #os.remove('output.json')
 
-with open('output.json', 'w') as f:
-    json.dump(output, f, indent=4)
-    f.close
+#with open('output.json', 'w') as f:
+    #json.dump(output, f, indent=4)
+    #f.close
