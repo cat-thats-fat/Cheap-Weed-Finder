@@ -1,11 +1,9 @@
 #Title: CWFrequests
-#Purpose: To get the cheapest weed from the cloest three dispensaries
-#Version: 1.0
-#Date: 22/11/2023
+#Purpose: To get the cheapest weed from the cloest four dispensaries
+#Version: 2.0
+#Date: 30/11/2023
 #To Do: 
-#   Todo:
-#   Format Output 
-#   Add other dispensaries
+#   maybe add other dispensaries
 
 import os
 import json
@@ -37,6 +35,13 @@ def janeRequest(data):
         "x-algolia-application-id": "VFM4X0N23A",
     }
     
+    data = {
+        "query": "",
+        "filters": filters_str,
+        "userToken": "XssZ5RgH1tpicdzUVCsrH",
+        "hitsPerPage": 200,
+    }
+
     r = requests.post(url, headers=headers, json=data)
 
     json_data = json.loads(r.text)
@@ -73,37 +78,47 @@ def janeRequest(data):
                     removekeys.append(key)
                     continue
                 if 'price_eighth_ounce' in key:
-                    dpg = (float(value) / 3.5)*0.85
-                    mary_dir[hit['name']]['dpg'].append([dpg, "eighth"])
+                    dpg = (float(value) / 3.5)
+                    mary_dir[hit['name']]['dpg'].append([dpg, "3.5", value])
+                    removekeys.append(key)
                     continue
                 elif 'price_quarter_ounce' in key:
-                    dpg = (float(value) / 7)*0.85
-                    mary_dir[hit['name']]['dpg'].append([dpg, "quarter"])
+                    dpg = (float(value) / 7)
+                    mary_dir[hit['name']]['dpg'].append([dpg, "7", value])
+                    removekeys.append(key)
                     continue
                 elif 'price_half_ounce' in key:
-                    dpg = (float(value) / 14)*0.85
-                    mary_dir[hit['name']]['dpg'].append([dpg, "half ounce"])
+                    dpg = (float(value) / 14)
+                    mary_dir[hit['name']]['dpg'].append([dpg, "14", value])
+                    removekeys.append(key)
                     continue
                 elif 'price_ounce' in key:
-                    dpg = (float(value) / 28)*0.85
-                    mary_dir[hit['name']]['dpg'].append([dpg, "ounce"])
+                    dpg = (float(value) / 28)
+                    mary_dir[hit['name']]['dpg'].append([dpg, "28", value])
+                    removekeys.append(key)
                     continue
                 elif 'price_gram' in key:
-                    dpg = (float(value))*0.85
-                    mary_dir[hit['name']]['dpg'].append([dpg, "gram"])
+                    dpg = (float(value))
+                    mary_dir[hit['name']]['dpg'].append([dpg, "1", value])
+                    removekeys.append(key)
                     continue
                 elif 'price_two_gram' in key:
-                    dpg = (float(value) / 2)*0.85
-                    mary_dir[hit['name']]['dpg'].append9(dpg , "two gram")
+                    dpg = (float(value) / 2)
+                    mary_dir[hit['name']]['dpg'].append9([dpg , "2", value])
+                    removekeys.append(key)
                     continue
                 elif 'price_half_gram' in key:
-                    dpg = (float(value) / 0.5)*0.85
-                    mary_dir[hit['name']]['dpg'].append([dpg, "half gram"])
+                    dpg = (float(value) / 0.5)
+                    mary_dir[hit['name']]['dpg'].append([dpg, "3", value])
+                    removekeys.append(key)
                     continue
                 else:
                     print("Error at DPG calculation")
+                
             else:
                 continue
+
+
         mary_dir[hit['name']]['dpg'].sort()
 
         for key in removekeys:
@@ -139,44 +154,53 @@ def dutchrequest(dutchID):
 
     json.dumps(json_data, indent=4, sort_keys=True)
 
-    inspired_dir = {}
+    dutch_dir = {}
     for product in json_data["data"]["filteredProducts"]["products"]:
-        inspired_dir[product["Name"]] = {
+        dutch_dir[product["Name"]] = {
             "category": product["strainType"],
             "brand": product["brandName"],
             "weights": product["Options"],
             "prices": product["recPrices"],
             "specialPrices": product["recSpecialPrices"],
+            "dpg": []
         }
 
-        dpg = []
-        pairing = {}
-        for pair in range(len(inspired_dir["Name"]["weights"])):
-            pairing[inspired_dir["Name"]["weights"][pair]] = inspired_dir["Name"]["prices"][pair]
-        return inspired_dir
+        current = dutch_dir[product["Name"]]
 
-    #currently task: append dpg to inspired_dir["Name"]
-                     #steps to do: pair weights and prices, calculate dpg, sortdpg then sort entire directory by dpg, return top 5
-                     #other: change inspired_dir["Name"] to dutchie_dir["Name"]
+        if current["specialPrices"] is None:
+            del current["specialPrices"]
+            continue
+        elif current["specialPrices"] is not None:
+            for price in range(len(current["specialPrices"])):
+                current["prices"][price] = current["specialPrices"][price]
+            del current["specialPrices"]
+
+        dpgtemp = []
+        for offer in range(len(current["prices"])):
+            current["weights"][offer] = current["weights"][offer].replace("g", "")
+            dpg = float(current["prices"][offer]) / float(current["weights"][offer])
+            dpgtemp.append([dpg, current["weights"][offer], current["prices"][offer]])
+            dpgtemp.sort(key=lambda x: x[0])
+        current["dpg"] = dpgtemp
+        del dpgtemp
+
+        del current["prices"]
+        del current["weights"]
 
 
+    dutch_dir = dict(sorted(dutch_dir.items(), key=lambda item: item[1]['dpg'][0])[:5])
 
+    return dutch_dir
 
 
 dutchIDs = {"710": "5fefa138b2782100c5acd671", "Giggles": "62e858e63967b40082a6aba1"}
 janeIDs = {"MaryJ's" : 3217, "Inspired" : 4556}
 
 output = {}
-#for key, value in storeIDs.items():
-    #filters_str = f"store_id : {value} AND (root_types:\"flower\")"
 
-    #data = {
-        #"query": "",
-        #"filters": filters_str,
-        #"userToken": "XssZ5RgH1tpicdzUVCsrH",
-        #"hitsPerPage": 200,
-    #}
-    #output[key] = janeRequest(data)
+for key, value in janeIDs.items():
+    filters_str = f"store_id : {value} AND (root_types:\"flower\")"
+    output[key] = janeRequest(filters_str)
 
 for key, value in dutchIDs.items():
     output[key] = dutchrequest(value)
@@ -186,5 +210,5 @@ if os.path.exists('output.json'):
     os.remove('output.json')
 
 with open('output.json', 'w') as f:
-    json.dump(output, f, indent=4)
-    f.close
+   json.dump(output, f, indent=4)
+   f.close
