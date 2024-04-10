@@ -1,8 +1,33 @@
+#Purpose: send a request to the inputed dispenaries and then extract data from the response and sort it.
+#Author: cat-thats-fat
+#Date: 10-04-2024
+#Version: 2.2
+#Current Task: Add support for iheartjane
+#To-Do:
+    # Create menu option for finding a stores ID given a link to store
+    # Create menu option to add/remove stores
+
+
+import os
 import json
 import requests
 from urllib.parse import quote
+from config import dutchIDS
 
-def dutchrequest(info , dutchfilters):
+#function to clear terminal and return home
+def home(currentchoice):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    main(currentchoice)
+
+#function which takes a dictionary and spits out a list sorted smallest dpg to biggest.
+def sorter(extracted):
+    items = [[key, item] for key, item in extracted.items()]
+    sortedlist = sorted(items, key=lambda x: x[1]["options"][0][0])
+    sorteddict = dict(sortedlist)
+    return sorteddict
+
+#function to handle requests to dutchie and extracting/formatting data from the response
+def dutchrequest(info , dutchfilters, currentchoice):
 
     #build the request
     
@@ -14,10 +39,10 @@ def dutchrequest(info , dutchfilters):
         "productsFilter": {
             "dispensaryId": info["id"],
             "pricingType": "rec",
-            "strainTypes": [dutchfilters["strainType"][1]],
+            "strainTypes": [dutchfilters["strainType"][currentchoice[0]]],
             "subcategories": [],
             "Status": "Active",
-            "types": [dutchfilters["category"][0]],
+            "types": [dutchfilters["category"][currentchoice[1]]],
             "useCache": False,
             "sortDirection": 1,
             "sortBy": "weight",
@@ -76,7 +101,7 @@ def dutchrequest(info , dutchfilters):
             currentoffer = []
             weights[i] = weights[i].replace("g", "")
             dpg = float(prices[i])/float(weights[i])
-            if discount != 0: currentoffer.append(dpg)
+            if discount == 0: currentoffer.append(dpg)
             else:
                 finaldpg = dpg*(1-discount/100)
                 currentoffer.append(finaldpg)
@@ -101,60 +126,74 @@ def dutchrequest(info , dutchfilters):
             },
         }
 
-    # sort all offers by their best dpg(the first one bc its already sorted)
-    sorted = []
-    count = 0
-
-    #need to create a sorted list
+    #sort dictionary
+    sorteddict = sorter(extracted)
         
+    #Return the sorted dictionary
 
-        
+    return sorteddict
 
-    #Return the response
-
-    return sorted
-
+#function to handle requests to iheartjane and extracting/formatting data from the response
 def maryrequest(maryID , category):
     #Build the request
     #send the request
     #Format the response
     #Return the response
-    return output
+    return 
 
-#Where the store IDS are stored
-dutchIDS = {
-    "Giggles":  {
-        "id": "62e858e63967b40082a6aba1",
-        "discount": 10
-    },
-    "Avenue":  {
-        "id": "630693d206463800b24a8e4c",
-        "discount": 10
-    },
-}
-
+#dutchie filter keys
 dutchfilters = {
     "category": ["Flower", "Vaporizers", "Pre-Rolls", "Concentrate" ],
-    "strainType": ["Sativa", "Indica", "Hybrid"],
-    "discount": 10
+    "strainType": ["Sativa", "Indica", "Hybrid", ""],
 }
 
+filters = {
+    "category": ["Flower", "Vaporizers", "Pre-Rolls", "Concentrate" ],
+    "strainType": ["Sativa", "Indica", "Hybrid", ""],
+}
+# first is type second is cate
+currentchoice = [0, 0]
 
+def main(currentchoice):
 
-output = {}
+    cate = filters["category"][currentchoice[0]]
+    type = filters["strainType"][currentchoice[1]]
 
-if __name__ == "__main__":
-    #Loop through the IDs and request the data
-    loop = 0
-    if len(dutchIDS) > 0:
-        for name, info in dutchIDS.items():
-           output[name] = dutchrequest(info, dutchfilters)
-           loop += 1
-           print(loop)
+    print("Cheap Weed Finder")
+    print()
+    print(f"Current parameters: \n  Category: {cate} \n  Type: {type}")
+    print()
+    print("1. Change search parameters")
+    print("2. Search")
+    print("3. Exit")
+
+    choice = int(input(">"))
+
+    if choice == 1:
+        print("Change Search Parameters")
+        print()
+        print("Available Categories: Flower(1), Vaporizers(2), Pre-rolls(3), Concentrate)(4)")
+        print()
+        print("Strain types: Sativa(1), Indica(2), Hybrid(3), No Prefrence(4)")
+        print()
+        
+        currentchoice[1] = int(input("Enter the category you'd like to search.")) - 1
+        currentchoice[0] = int(input("Enter the type of strain you'd like to search.")) - 1
+        home(currentchoice)
+    elif choice == 2:
+
+        output = {}
+
+        #Loop through the IDs and request the data
+        if len(dutchIDS) > 0:
+            for name, info in dutchIDS.items():
+                output[name] = (dutchrequest(info, dutchfilters, currentchoice))
     
-    with open("output.json", "w") as f:
-        json.dump(output, f, indent=4)
-        f.close
+        with open("output.json", "w") as f:
+            json.dump(output, f, indent=4)
+            f.close
 
-    print("done")
+    elif choice == 3:
+        exit()
 
+main(currentchoice)
