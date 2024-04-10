@@ -9,7 +9,7 @@
 
 ## Features:
 
-  Search for Flower, Pre-rolls, Edibles and Concentrates.
+  Search for Flower, Pre-rolls, Vaporizers and Concentrates.
   
   Store by store discount.
   
