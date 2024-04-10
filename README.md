@@ -22,7 +22,7 @@
   Add/remove stores without needing to change code
   
 ## Adding more stores:
-To add more stores find its storeID(instructions below) and add it to their respective lists(ln 196,197)
+To add more stores find its storeID(instructions below) and add it to config.py
 
   ### iheartjane: 
     Inspect the dispensary's website and then Ctrl + F search for "storeID" in the html, it should be 4 digits.
