@@ -1,6 +1,26 @@
-# Kingston-Cheap-Weed
-This is a python script that uses iheartjane and dutchie apis to get the data about their bud offers and then calculates and displays the cheapest 5 offers from each dispensary. 
+# Cheap Weed Finder
+### This is a program made to help you find the best deals on weed!
 
+## Supported APIs:
+
+  Dutchie
+  
+  Iheartjane(COMING SOON)
+
+## Features:
+
+  Search for Flower, Pre-rolls, Edibles and Concentrates.
+  
+  Store by store discount.
+  
+  Can search multiple stores.
+  
+### To-be-added Features:
+
+  Maximum price.
+  
+  Add/remove stores without needing to change code
+  
 ## Adding more stores:
 To add more stores find its storeID(instructions below) and add it to their respective lists(ln 196,197)
 
@@ -10,6 +30,6 @@ To add more stores find its storeID(instructions below) and add it to their resp
  ### dutchie: 
     Inspect the dispensarie's website and go to the network tab.
     With the network tab open, refresh the page and filter for Fetch/XHR.
-    Look for names that start with "graphql?operationName=" and click on it there should be multiple, it doesnt matter which you click.
+    Look for requests like graphql?operationName=FilteredProducts/MenuFilters/GetMenuSelection, it doesnt matter which you pick.
     Then press the payload tab and press view decoded.
     In the variable row you should see "dispensaryId":"XXXXXXXXXXXXXXXXXXXXXXXX". (example: "dispensaryId":"5fefa138b2782100c5acd671")
