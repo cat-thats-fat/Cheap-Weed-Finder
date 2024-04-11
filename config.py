@@ -1,3 +1,5 @@
+#Path to the folder
+path = "C:/Users/drbs2/OneDrive/Desktop/coding/git/Kingston Cheap Weed/Kingston-Cheap-Weed"
 #This is where you add dispensaries to be searched
 dutchIDS = {
     "Giggles":  {

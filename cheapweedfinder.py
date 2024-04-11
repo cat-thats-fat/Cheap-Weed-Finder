@@ -12,7 +12,7 @@ import os
 import json
 import requests
 from urllib.parse import quote
-from config import dutchIDS
+from config import dutchIDS, path
 
 #function to clear terminal and return home
 def home(currentchoice):
@@ -182,16 +182,27 @@ def main(currentchoice):
         home(currentchoice)
     elif choice == 2:
 
+        os.system('cls' if os.name == 'nt' else 'clear')
+        count = 1
+        print("Requesting Data")
+        
         output = {}
 
         #Loop through the IDs and request the data
         if len(dutchIDS) > 0:
             for name, info in dutchIDS.items():
                 output[name] = (dutchrequest(info, dutchfilters, currentchoice))
-    
-        with open("output.json", "w") as f:
+                print(f"{count}/{len(dutchIDS)} stores searched")
+                count += 1
+            print("Search Complete")
+
+#write the output
+        with open(f"{path}/output.json", "w") as f:
             json.dump(output, f, indent=4)
             f.close
+
+        print("Results Saved.")
+        input("Press enter to exit...")
 
     elif choice == 3:
         exit()
