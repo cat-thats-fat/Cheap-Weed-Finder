@@ -9,7 +9,7 @@
 
 ## Features:
 
-  Search for Flower, Pre-rolls, Edibles and Concentrates.
+  Search for Flower, Pre-rolls, Vaporizers and Concentrates.
   
   Store by store discount.
   
@@ -21,8 +21,12 @@
   
   Add/remove stores without needing to change code
   
-## Adding more stores:
-To add more stores find its storeID(instructions below) and add it to config.py
+## Configuring:
+To remove/add stores edit config.py
+
+You also need to enter the output path in config.py
+
+If you do not have a discount at a store enter the value 0
 
   ### iheartjane: 
     Inspect the dispensary's website and then Ctrl + F search for "storeID" in the html, it should be 4 digits.
