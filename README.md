@@ -9,7 +9,7 @@
 
 ## Features:
 
-  Search for Flower, Pre-rolls, ~~Vaporizers~~soonTM and Concentrates.
+  Search for Flower, Pre-rolls, ~~Vaporizers~~ soonTM and Concentrates.
   
   Store by store discount.
   
