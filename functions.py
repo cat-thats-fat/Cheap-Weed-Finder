@@ -2,7 +2,10 @@ import os
 import json
 import requests
 from urllib.parse import quote
-from config import dutchIDS, janeIDS, path
+
+#function to clear the console no matter what platform you are on
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 # function which takes a dictionary and spits out a list sorted smallest dpg to biggest.
 def sorter(extracted):
@@ -13,15 +16,20 @@ def sorter(extracted):
 
 
 # function to handle requests to dutchie and extracting/formatting data from the response
-def dutchrequest(info, currentchoice):
+def dutchrequest(info, config):
 
     dutchfilters = {
         "category": ["Flower", "Vaporizers", "Pre-Rolls", "Concentrate"],
         "strainType": ["Sativa", "Indica", "Hybrid", ""],
     }
 
-    # build the request
+    print(config["choices"]["strain"])
+    print(dutchfilters["strainType"][config["choices"]["strain"]])
+    #set match our chosen filters to the syntax of the api
+    strainchoice = dutchfilters["strainType"][config["choices"]["strain"]]
+    categorychoice = dutchfilters["category"][config["choices"]["category"]]
 
+    # build the request
     url = "https://dutchie.com/graphql"
 
     variables = {
@@ -30,10 +38,9 @@ def dutchrequest(info, currentchoice):
         "productsFilter": {
             "dispensaryId": info["id"],
             "pricingType": "rec",
-            "strainTypes": [dutchfilters["strainType"][currentchoice[0]]],
             "subcategories": [],
             "Status": "Active",
-            "types": [dutchfilters["category"][currentchoice[1]]],
+            "types": [categorychoice],
             "useCache": False,
             "sortDirection": 1,
             "sortBy": "weight",
@@ -42,9 +49,12 @@ def dutchrequest(info, currentchoice):
             "isKioskMenu": False,
             "removeProductsBelowOptionThresholds": True
         },
-        "page": 0,
-        "perPage": 200
     }
+
+    # only include strainTypes in variables if strainchoice is not an empty string
+    if strainchoice:
+        variables["productsFilter"]["strainTypes"] = [strainchoice]
+
 
     extensions = {
         "persistedQuery": {
@@ -72,6 +82,8 @@ def dutchrequest(info, currentchoice):
 
     # send the request
     responseraw = requests.get(url, params=params, headers=headers)
+
+    print(responseraw.text)
 
     response = json.loads(responseraw.text)
 
@@ -103,6 +115,7 @@ def dutchrequest(info, currentchoice):
 
         options.sort(key=lambda x: x[0])
 
+        #format the data
         extracted[product["Name"]] = {
             "brand": product["brandName"],
             "strainType": product["strainType"],
@@ -117,23 +130,32 @@ def dutchrequest(info, currentchoice):
             },
         }
 
-    # sort dictionary
+    #sort dictionary
     sorteddict = sorter(extracted)
 
-    # Return the sorted dictionary
+    #return the sorted dictionary
     return sorteddict
 
 
-# function to handle requests to iheartjane and extracting/formatting data from the response
-def maryrequest(info, currentchoice):
+#function to handle requests to iheartjane and extracting/formatting data from the response
+def janerequest(info, config):
 
     maryfilters = {
-        "category": ["flower", "vape", "pre-rolls", "extract"],
+        "category": ["flower", "pre-rolls", "vaporizer", "extract"],
         "strainType": ["Sativa", "Indica", "Hybrid", ""],
     }
-# (root_types:\"flower\")
-# (category:\"sativa\")
-    # Build the request
+
+    strainchoice = maryfilters["strainType"][config["choices"]["strain"]]
+    categorychoice = maryfilters["category"][config["choices"]["category"]]
+
+    #build the request
+
+    filters = f"kind:\"{categorychoice}\" OR root_types:\"{categorychoice}\" OR kind:\"specials\" OR root_types:\"specials\" AND store_id = {info['id']} AND (root_types:\"{categorychoice}\")"
+
+    #check if no strain preferance
+    if strainchoice != "":
+        print("true")
+        filters += f" AND (category:\"{strainchoice}\")"
 
     request = {
         "method": "POST",
@@ -146,19 +168,18 @@ def maryrequest(info, currentchoice):
         },
         "data": {
             "query": "",
-            "filters": f"store_id = 3217 AND {maryfilters['category'][currentchoice][0]}  AND {maryfilters['category'][currentchoice][1]}",
-            "hitsPerPage": 100,
+            "filters": filters,
             "facets": ["*"]
         }
     }
 
-    # send the request
+    #send the request
 
     response = requests.post(request['url'], headers=request['headers'], data=json.dumps(request['data']))
 
     jsoned = json.loads(response.text)
 
-    # Extract wanted data
+    #extract wanted data
 
     extraction = {}
 
@@ -187,7 +208,7 @@ def maryrequest(info, currentchoice):
             "options": []
         }
 
-    # Process the data
+    #process the data
 
     weightvals = {
         "priceeach": 1,
@@ -215,20 +236,21 @@ def maryrequest(info, currentchoice):
         for key in keys2go:
             del current["temp"][key]
 
-        # Calculate the dollars per gram
+        #calculate the dollars per gram
 
         for offer in current["temp"]:
 
             price = float(current["temp"][offer][0])
             weight = float(current["temp"][offer][1])
 
-            dpg = (price / weight) * (1 - (discount / 100))
+            dpg = (price / weight) * (1 - (info["discount"] / 100))
 
             current["options"].append([dpg, weight, price])
 
-        # Remove the temporary dictionary
+        #remove the temporary dictionary
 
         del current["temp"]
 
-    # Return the output
-    return extraction
+    #return the output
+    sorteddict = sorter(extracted=extraction)
+    return sorteddict

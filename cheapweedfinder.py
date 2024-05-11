@@ -1,108 +1,129 @@
-from functions import dutchrequest, maryrequest, sorter, os, json
-from config import dutchIDS, janeIDS, path
-
-# Purpose: send a request to the inputed dispensaries and then extract data from the response and sort it.
+import os
+import json
+from functions import dutchrequest, janerequest, clear
+# Purpose: Find the best deals on weed using requests and simple math
 # Author: cat-thats-fat
 # Date: 10-04-2024
-# Version: 2.2
-# Current Task: Add support for iheartjane
+# Version: 3.0.0
+# Current Task: Rewrite interface
 # To-Do:
-#     Create menu option for finding a store's ID given a link to the store
-#     Create menu option to add/remove stores
+#     Clean up all the code
+#     Add documentation
 
-filters = {
-    "category": ["Flower", "Vaporizers", "Pre-Rolls", "Concentrate"],
-    "strainType": ["Sativa", "Indica", "Hybrid", "No Preference"],
-}
-# first is type second is cate
-currentchoice = [0, 0]
+def main(config):
 
-def home(currentchoice):
-    os.system('cls' if os.name == 'nt' else 'clear')
-    main(currentchoice)
+    filters = {
+        "categories": ["Flower", "Pre-Rolls", "Vaporizer", "Concentrates"],
+        "strains": ['Sativa', "Indica", "Hybrid", "No Preference"]
+    }
 
-def main(currentchoice):
+    clear()
 
-    cate = filters["category"][currentchoice[0]]
-    type = filters["strainType"][currentchoice[1]]
-
-    print("Cheap Weed Finder")
-    print()
-    print(f"Current parameters: \n  Category: {cate} \n  Type: {type}")
-    print()
-    print("1. Change search parameters")
-    print("2. Search")
-    print("3. View store(s) and change discounts")
-    print("3. Exit")
-
-    choice = int(input(">"))
+    print("Cheap Weed Finder \n")
+    print(f"Current Category: {filters['categories'][config["choices"]["category"]]}")
+    print(f"Current Strain: {filters['strains'][config["choices"]["strain"]]} \n")
+    print("1. Search")
+    print("2. Change search parameters")
+    print("3. Save & Exit \n")
+    choice = int(input("Enter choice: "))
 
     if choice == 1:
-        print("Change Search Parameters")
-        print()
-        print("Available Categories: Flower(1), Vaporizers(2), Pre-rolls(3), Concentrate(4)")
-        print()
-        print("Strain types: Sativa(1), Indica(2), Hybrid(3), No Preference(4)")
-        print()
+        
+        clear()
 
-        currentchoice[0] = int(input("Enter the category you'd like to search: ")) - 1
-        currentchoice[1] = int(input("Enter the type of strain you'd like to search: ")) - 1
-        home(currentchoice)
-
-    elif choice == 2:
-
-        os.system('cls' if os.name == 'nt' else 'clear')
-        count = 1
-        print("Requesting Data")
-
+        print("Cheap Weed Finder \n")
+        print("Progress:")
+        
         output = {}
 
-        # Loop through the IDs and request the data
-        if len(dutchIDS) > 0:
-            for name, info in dutchIDS.items():
-                output[name] = (dutchrequest(info, currentchoice))
-                print(f"{count}/{len(dutchIDS)} stores searched")
-                count += 1
-            print("Search Complete")
+        count = 0
 
-        # write the output
-        with open(f"{path}/output.json", "w") as f:
-            json.dump(output, f, indent=4)
-            f.close()
+        dispos = len(config["dutchIDS"]) + len(config["janeIDS"])
 
-        print("Results Saved.")
-        input("Press enter to exit...")
+        # search dutchie IDS
+        for dispo in config["dutchIDS"]:
+            info = config["dutchIDS"][dispo]
+            output[dispo] = dutchrequest(info, config)
+            count += 1
+            print(f"Sites searched: {count}/{dispos}")
+        
+        for dispo in config["janeIDS"]:
+            info = config["janeIDS"][dispo]
+            output[dispo] = janerequest(info, config)
+            count += 1
+            print(f"Sites searched: {count}/{dispos}")
 
-    elif choice == 3:
+        with open("output.json", "w") as f:
+            json.dump(output, f, indent=6)
+            f.close
+        print("Search complete and results saved.")
+        input("Press enter to return home...")
+        main(config)
+            
+            
+
+
+    elif choice == 2:
+        
+        clear()
 
         print("Cheap Weed Finder")
+        print("Change Parameters")
         print()
-        print("Current Dispenaries:")
+        print("Categories: Flower(1), Pre-Rolls(2), Vaporizers(3), Concentrate(4)")
+        print("Strains: Sativa(1), Indica(2), Hybrid(3), No Preference(4)")
         print()
-        for name in dutchIDS:
-            print(name)
-            print(f"Discount: {dutchIDS[name]["discount"]}")
-        print()
-        print("1. Change Discount")
-        print("2. Return Home")
-        print(">")
-        choice = input()
+        config["choices"]["category"] = int(input("Which category would you like to search for?")) - 1
+        config["choices"]["strain"] = int(input("Which strain would you like to search for?")) - 1
+        input("Changes saved, press enter to return home...")
+        main(config)
 
-        if choice == 1:
+    elif choice == 3:
+        with open("config.json", "w") as f:
+            json.dump(config, f, indent=4)
+            f.close
 
-            print("Change Dispensarie discounts:")
-            print()
-            for store in dutchIDS:
-                print(store)
-                print(f"Current Discount: dutchIDS[store]["discount"]")
-                print("Enter new discount:")
-                discount = input
-        elif choice == 2:
-            home()
-
-
-    elif choice == 4:
+        clear()
         exit()
 
+def setup():
+    clear()
 
-main(currentchoice)
+    if not os.path.exists("config.json"):
+        print("Welcome to Cheap Weed Finder by cat-thats-fat")
+        print("It appears to be your first time using CWF as the config file cannot be found.")
+        config_template = {
+            "choices": {
+                "category": 0,
+                "strain": 0
+            },
+            "dutchIDS": {
+                "DISPENSARY NAME": {
+                    "id": "R3PL4C3_TH15_W1TH_TH3_1D",
+                    "discount": 420
+                },
+            },
+            "janeIDS": {
+                "DISPENSARY NAME": {
+                    "id": "1234",
+                    "discount": 420
+                },
+            }
+        }
+
+        with open("config.json", "w") as f:
+            json.dump(config_template, f, indent=4)
+            f.close
+        print("Config file created")
+        print("Fill in the config file, follow the instructions in the readme to find the IDS.")
+        input("Press enter to exit....")
+        exit()
+
+if __name__ == "__main__":
+    setup()
+
+    with open("config.json", "r") as f:
+        config = json.load(f)
+        f.close()
+
+    main(config)
