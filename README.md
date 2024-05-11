@@ -5,11 +5,11 @@
 
   Dutchie
   
-  Iheartjane(COMING SOON)
+  Iheartjane
 
 ## Features:
 
-  Search for Flower, Pre-rolls, Vaporizers and Concentrates.
+  Search for Flower, Pre-rolls, ~~Vaporizers~~soonTM and Concentrates.
   
   Store by store discount.
   
@@ -19,12 +19,10 @@
 
   Maximum price.
   
-  Add/remove stores without needing to change code
+  Add/remove stores by pasting a link to the storefront, and the program will scrape the ID from it.
   
 ## Configuring:
-To remove/add stores edit config.py
-
-You also need to enter the output path in config.py
+To remove/add stores edit config.py just follow the format of the config file that is made for you, the program checks for a config every launch and will make one if not found.
 
 If you do not have a discount at a store enter the value 0
 
