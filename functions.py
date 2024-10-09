@@ -150,7 +150,7 @@ def janerequest(info, config):
 
     #build the request
 
-    filters = f"kind:\"{categorychoice}\" OR root_types:\"{categorychoice}\" OR kind:\"specials\" OR root_types:\"specials\" AND store_id = {info['id']} AND (root_types:\"{categorychoice}\")"
+    filters = f"store_id = {info['id']} AND kind:\"{categorychoice}\" OR root_types:\"{categorychoice}\""
 
     #check if no strain preferance
     if strainchoice != "":
@@ -168,7 +168,8 @@ def janerequest(info, config):
         "data": {
             "query": "",
             "filters": filters,
-            "facets": ["*"]
+            "facets": ["*"],
+            "hitsPerPage": 200
         }
     }
 
@@ -177,6 +178,7 @@ def janerequest(info, config):
     response = requests.post(request['url'], headers=request['headers'], data=json.dumps(request['data']))
 
     jsoned = json.loads(response.text)
+
     #extract wanted data
 
     extraction = {}
