@@ -23,8 +23,8 @@ def dutchrequest(info, config):
         "strainType": ["Sativa", "Indica", "Hybrid", ""],
     }
 
-    print(config["choices"]["strain"])
-    print(dutchfilters["strainType"][config["choices"]["strain"]])
+    #print(config["choices"]["strain"])
+    #print(dutchfilters["strainType"][config["choices"]["strain"]])
     #set match our chosen filters to the syntax of the api
     strainchoice = dutchfilters["strainType"][config["choices"]["strain"]]
     categorychoice = dutchfilters["category"][config["choices"]["category"]]
@@ -83,7 +83,7 @@ def dutchrequest(info, config):
     # send the request
     responseraw = requests.get(url, params=params, headers=headers)
 
-    print(responseraw.text)
+    #print(responseraw.text)
 
     response = json.loads(responseraw.text)
 
@@ -154,16 +154,15 @@ def janerequest(info, config):
 
     #check if no strain preferance
     if strainchoice != "":
-        print("true")
         filters += f" AND (category:\"{strainchoice}\")"
 
     request = {
         "method": "POST",
-        "url": "https://vfm4x0n23a-2.algolianet.com/1/indexes/menu-products-production/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.2)%3B%20Browser",
+        "url": "https://search.iheartjane.com/1/indexes/menu-products-production/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.14.2)%3B%20Browser",
         "headers": {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
             "content-type": "application/x-www-form-urlencoded",
-            "x-algolia-api-key": "b499e29eb7542dc373ec0254e007205d",
+            "x-algolia-api-key": "edc5435c65d771cecbd98bbd488aa8d3",
             "x-algolia-application-id": "VFM4X0N23A"
         },
         "data": {
@@ -178,7 +177,6 @@ def janerequest(info, config):
     response = requests.post(request['url'], headers=request['headers'], data=json.dumps(request['data']))
 
     jsoned = json.loads(response.text)
-
     #extract wanted data
 
     extraction = {}
