@@ -45,3 +45,7 @@ I wont be working on this project for the near future, unless something breaks. 
 ### Faulty Input Data
 
 Some dispensaries do not input data in its respective fields which will lead to the program crashing or bad output data. There is nothing that can be done about this except maybe inform a dispensary employee.
+  
+Example:
+
+![image](https://github.com/user-attachments/assets/16b71456-dc54-456d-9e23-305283a5a0ed)
