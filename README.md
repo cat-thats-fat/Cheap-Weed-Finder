@@ -17,6 +17,8 @@
   
 ### To-be-added Features:
 
+  Support for alernate Vaporizer Weight: some stores use the actual thc weight instead of the total weight(.15 isntead of 1G)
+
   Maximum price.
   
   Add/remove stores by pasting a link to the storefront, and the program will scrape the ID from it.
