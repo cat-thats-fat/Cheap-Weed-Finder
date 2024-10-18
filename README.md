@@ -9,7 +9,7 @@
 
 ## Features:
 
-  Search for Flower, Pre-rolls, Vaporizers and Concentrates.
+  Search for Flower, Pre-rolls, Vaporizers(sorta broken) and Concentrates.
   
   Can search multiple stores.
   
